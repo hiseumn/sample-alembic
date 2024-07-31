@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:11.7
+    container_name: alembic-db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=almebic
+  app:
+    image: python:3.8.2-slim
+    container_name: alembic-app
+    volumes:
+      - ./src:/usr/src
+    environment:
+      - PYTHONPATH=${PYTHONPATH}:/usr/src
+    tty: true
