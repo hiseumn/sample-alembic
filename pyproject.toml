@@ -8,10 +8,8 @@ authors = [
 dependencies = [
     "alembic>=1.13.2",
     "sqlalchemy>=2.0.31",
-    "psycopg>=3.2.1",
+    "psycopg[binary]>=3.2.1",
     "uuid6>=2024.7.10",
-    "uuid7>=0.1.0",
-    "psycopg2>=2.9.9",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"

@@ -5,12 +5,12 @@ from sqlalchemy.ext.declarative import declarative_base
 from uuid6 import uuid7
 
 Engine = create_engine(
-    "postgresql://postgres:postgres@alembic-db:5432/almebic",
-    encoding="utf-8",
-    echo=False
+    url="postgresql+psycopg://postgres:postgres@localhost:5432/almebic",
+    echo=False,
 )
 
 Base = declarative_base()
+
 
 class Memo(Base):
     __tablename__ = "memo"

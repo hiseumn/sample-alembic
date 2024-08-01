@@ -17,8 +17,8 @@ markupsafe==2.1.5
     # via mako
 psycopg==3.2.1
     # via sample-alembic
-psycopg2==2.9.9
-    # via sample-alembic
+psycopg-binary==3.2.1
+    # via psycopg
 sqlalchemy==2.0.31
     # via alembic
     # via sample-alembic
@@ -27,6 +27,4 @@ typing-extensions==4.12.2
     # via psycopg
     # via sqlalchemy
 uuid6==2024.7.10
-    # via sample-alembic
-uuid7==0.1.0
     # via sample-alembic
